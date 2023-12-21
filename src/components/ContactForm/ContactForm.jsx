@@ -1,7 +1,7 @@
 import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import { addContact } from 'store/Contact/contactsSlice';
 import { StyledBtn, StyledForm, StyledInput } from './ContactForm.styled';
+import { addContacts } from 'store/API';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ export const ContactForm = () => {
       name: e.target.elements.name.value,
       number: e.target.elements.number.value,
     };
-    dispatch(addContact(newObj));
+    dispatch(addContacts(newObj));
 
     e.target.reset();
   };
