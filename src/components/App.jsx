@@ -1,16 +1,19 @@
+import { Container, TitleH1, TitleH2, TitleH3 } from './Gobal.styled';
+import { ContactForm } from './ContactForm/ContactForm';
+import { ContactList } from './ContactList/ContactList';
+import { Filter } from './Filter/Filter';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Container>
+      <TitleH1>PhoneBook</TitleH1>
+      <ContactForm />
+      <TitleH2>Contacts</TitleH2>
+      <TitleH3>Find contacts by name</TitleH3>
+      <Filter />
+      <ContactList />
+    </Container>
   );
 };
+
+export default App;
